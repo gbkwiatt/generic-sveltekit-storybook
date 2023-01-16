@@ -5,15 +5,15 @@ const config = {
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
-        '@storybook/addon-svelte-csf',
+        '@storybook/addon-svelte-csf'
     ],
     core: { builder: '@storybook/builder-vite' },
     framework: {
-        name: '@storybook/svelte-vite',
+        name: '@storybook/sveltekit',
         options: {},
     },
     stories: [
-        '../src/**/**/*.stories.@(js|jsx|ts|tsx|svelte)',
+        '../src/**/**/*.stories.@(js|jsx|ts|tsx|svelte|md|mdx)',
     ],
     viteFinal(config) {
         const merged = mergeConfig(config, {
